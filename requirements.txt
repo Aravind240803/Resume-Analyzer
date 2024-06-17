@@ -1,0 +1,10 @@
+torch
+transformers
+pandas
+scikit-learn
+pdfminer.six
+python-docx
+streamlit
+pymongo 
+python-dotenv
+sentencepiece
