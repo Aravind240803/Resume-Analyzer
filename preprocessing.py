@@ -12,8 +12,8 @@ import io
 load_dotenv()
 
 # Connect to MongoDB
-client = MongoClient(os.getenv('MONGODB_URI'))
-db = client[os.getenv('MONGODB_DB')]
+client = MongoClient(os.getenv('mongodb://localhost:27017'))
+db = client[os.getenv('mongodb://localhost:27017')]
 fs = gridfs.GridFS(db)
 
 def extract_text_from_pdf(file_stream):
