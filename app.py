@@ -10,6 +10,11 @@ import numpy as np
 # Load environment variables
 load_dotenv()
 
+HUGGINGFACE_API_KEY = st.secrets["HUGGINGFACE_API_KEY"]
+HUGGINGFACE_MODEL_NAME = st.secrets["HUGGINGFACE_MODEL_NAME"]
+MONGODB_URI= st.secrets["MONGODB_URI"]
+MONGODB_DB = st.secrets["MONGODB_DB"]
+
 def save_to_db(resume_text, job_description_text, label, probabilities, feedback):
     # Create a document to insert into the database
     document = {
