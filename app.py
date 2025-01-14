@@ -25,8 +25,8 @@ def save_to_db(resume_text, job_description_text, label, probabilities, feedback
     db.predictions.insert_one(document)
 
 # Connect to MongoDB
-client = MongoClient(os.getenv('mongodb://localhost:27017'))
-db = client[os.getenv('mongodb://localhost:27017')]
+client = MongoClient(os.getenv('MONGODB_URI'))
+db = client[os.getenv('MONGODB_DB')]
 
 st.title("Resume Analyzer")
 
